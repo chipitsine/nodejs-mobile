@@ -63,6 +63,12 @@ jobs:
           python3.12 -m pip install setuptools
           ./tools/ios_framework_prepare.sh $TARGET_ARCH
 
+      - name: Show logs
+        if: always()
+        run: |
+          log show
+
+
       - uses: actions/upload-artifact@v4
         with:
           name: node-ios-${{ env.TARGET_ARCH }}
