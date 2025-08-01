@@ -63,6 +63,13 @@ jobs:
           python3.12 -m pip install setuptools
           ./tools/ios_framework_prepare.sh $TARGET_ARCH
 
+
+      - name: who the is Alice
+        if: always()
+        run: |
+          file /Users/runner/work/nodejs-mobile/nodejs-mobile/out/Release/node_js2c
+          otool -L /Users/runner/work/nodejs-mobile/nodejs-mobile/out/Release/node_js2c
+
 #      - name: Show logs
 #        if: always()
 #        run: |
