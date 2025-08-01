@@ -63,10 +63,17 @@ jobs:
           python3.12 -m pip install setuptools
           ./tools/ios_framework_prepare.sh $TARGET_ARCH
 
-      - name: Show logs
+#      - name: Show logs
+#        if: always()
+#        run: |
+#          log show
+
+      - uses: actions/upload-artifact@v4
         if: always()
-        run: |
-          log show
+        with:
+          name: diag
+          path: Library/Logs/DiagnosticReports/
+
 
 
       - uses: actions/upload-artifact@v4
