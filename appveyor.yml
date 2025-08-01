@@ -6,11 +6,11 @@ environment:
   matrix:
     - CONFIGURATION: Release
 
-before_build:
-  - brew update
-  - brew install cmake
-  - brew install python
-
+#before_build:
+#  - brew update
+#  - brew install cmake
+#  - brew install python
+#
 build_script:
   - ulimit -n 65536
   - ulimit -c unlimited
@@ -19,6 +19,6 @@ build_script:
   - python3.12 -m pip install setuptools
   - ./tools/ios_framework_prepare.sh arm64
 
-artifacts:
-  - path: build/*.dmg
-    name: MyApp
+#artifacts:
+#  - path: build/*.dmg
+#    name: MyApp
