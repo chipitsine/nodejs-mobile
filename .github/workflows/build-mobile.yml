@@ -69,6 +69,7 @@ jobs:
         run: |
           file /Users/runner/work/nodejs-mobile/nodejs-mobile/out/Release/node_js2c
           otool -L /Users/runner/work/nodejs-mobile/nodejs-mobile/out/Release/node_js2c
+          otool -l /Users/runner/work/nodejs-mobile/nodejs-mobile/out/Release/node_js2c
           lipo -info /Users/runner/work/nodejs-mobile/nodejs-mobile/out/Release/node_js2c
           /Users/runner/work/nodejs-mobile/nodejs-mobile/out/Release/node_js2c
 
